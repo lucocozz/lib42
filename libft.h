@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:37:23 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/12 17:09:43 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/12 21:00:24 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,10 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
+int					ft_lputstr(char const *s);
 void				ft_putnbr(int n);
 void				*ft_calloc(size_t count, size_t size);
+void				*ft_realloc(void *ptr, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_count_word(const char *str);
 int					get_next_line(int fd, char **line);
