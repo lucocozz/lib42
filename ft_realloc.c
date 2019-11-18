@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 18:52:26 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/12 19:14:50 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/18 02:17:10 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 void	*ft_realloc(void *ptr, size_t size)
 {
-	void	*new;
-	size_t	last_size;
+	char	*newptr;
 
-	if (ptr == NULL)
-		return (malloc(size));
-	last_size = sizeof(ptr);
-	if (size <= last_size)
-		return (ptr);
-	if ((new = malloc(size)) == NULL)
+	if (!size && ptr)
+	{
+		if (!(newptr = (char *)malloc(1)))
+			return (NULL);
+		ft_memdel(&ptr);
+		return (newptr);
+	}
+	if (!(newptr = (char *)malloc(size)))
 		return (NULL);
-	ft_memcpy(new, ptr, last_size);
-	free(ptr);
-	return (new);
+	if (ptr)
+	{
+		ft_memcpy(newptr, ptr, size);
+		ft_memdel(&ptr);
+	}
+	return (newptr);
 }

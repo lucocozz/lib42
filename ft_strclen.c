@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 15:59:01 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/12 16:01:07 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/16 18:50:23 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 size_t	ft_strclen(const char *s, char c)
 {
 	int	i;
-
+	
+	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
 	return (s[i] == c ? i : -1);

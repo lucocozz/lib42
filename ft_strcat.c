@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 15:50:57 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/16 18:50:33 by lucocozz         ###   ########.fr       */
+/*   Created: 2019/11/12 21:15:12 by lucocozz          #+#    #+#             */
+/*   Updated: 2019/11/12 22:39:00 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strcat(char *dest, char *src)
 {
 	int i;
-	
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	int j;
+
+	j = 0;
+	i = ft_strlen(dest);
+	while (src[j])
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }

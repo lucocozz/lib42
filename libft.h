@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:37:23 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/12 21:00:24 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/18 02:14:41 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # endif
 
 void				*ft_memset(void *s, int c, size_t n);
+void				ft_memdel(void **ap);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -35,6 +36,8 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
 int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strcat(char *dest, char *src);
+char				*ft_strcpy(char *dest, char *src);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
