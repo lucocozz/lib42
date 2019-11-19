@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 17:04:19 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/12 17:09:26 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/19 18:12:39 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,8 @@ static int		ft_getbuff(char **buffer, int fd)
 {
 	int		chr;
 	int		size;
-	char	*tmp_cat;
-	char	*tmp_buff;
 	char	tmp_read[BUFFER_SIZE + 1];
 
-	tmp_buff = *buffer;
 	while (1)
 	{
 		ft_bzero(tmp_read, BUFFER_SIZE + 1);
@@ -47,16 +44,11 @@ static int		ft_getbuff(char **buffer, int fd)
 			return (-1);
 		else if (size == 0)
 			break ;
-		tmp_cat = ft_strjoin(tmp_buff, tmp_read);
-		if (tmp_buff)
-			free(tmp_buff);
-		tmp_buff = NULL;
-		ft_swap((void **)&tmp_cat, (void **)&tmp_buff);
+		*buffer = ft_strfjoin(*buffer, tmp_read);
 		chr = ft_strclen(tmp_read, '\n');
 		if (chr > -1 || (chr == -1 && size < BUFFER_SIZE))
 			break ;
 	}
-	*buffer = tmp_buff;
 	return (1);
 }
 
@@ -80,8 +72,7 @@ int				get_next_line(int fd, char **line)
 	if ((i = ft_strclen(buffer, '\n')) == -1 &&
 	(ret = ft_getbuff(&buffer, fd)) == -1)
 	{
-		if (buffer)
-			free(buffer);
+		ft_strdel(buffer);
 		return (-1);
 	}
 	*line = ft_getline(&buffer, ft_strlen(buffer), &ret);
