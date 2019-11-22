@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:37:23 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/22 03:33:23 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/22 03:38:23 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char				*ft_strcat(char *dest, char *src);
 char				*ft_strcpy(char *dest, char *src);
 int					ft_atoi(const char *str);
 char				*ft_itoa_base(int value, char *base);
-char				*ft_uitoa_base(uintmax_t n, char const *base);
+char				*ft_uitoa_base(unsigned int n, char const *base);
 int					ft_atoi_base(char *str, char *base);
 char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
 int					ft_isalpha(int c);
