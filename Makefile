@@ -18,7 +18,8 @@ SRCS=	ft_memset.c			ft_bzero.c			ft_memcpy.c		\
 		ft_strcat.c			ft_memdel.c			ft_strdel.c		\
 		ft_strfjoin.c		ft_srealloc.c		ft_itoa_base.c	\
 		ft_atoi_base.c		ft_convert_base.c	ft_uitoa_base.c	\
-		ft_nbrlen.c			ft_strrev.c
+		ft_nbrlen.c			ft_strrev.c			ft_subfstr.c	\
+		ft_uitoa.c
 
 
 OBJS_S= $(SRCS:%.c=%.o)

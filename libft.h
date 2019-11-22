@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:37:23 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/22 04:08:17 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/22 20:48:21 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isspace(int c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strfjoin(char *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_uitoa(unsigned int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 int					ft_lputstr(char const *s);
@@ -69,6 +69,7 @@ void				*ft_calloc(size_t count, size_t size);
 void				*ft_realloc(void *ptr, size_t size);
 char				*ft_srealloc(char *str, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_subfstr(char *s, unsigned int start, size_t len);
 int					ft_count_word(const char *str);
 int					get_next_line(int fd, char **line);
 
