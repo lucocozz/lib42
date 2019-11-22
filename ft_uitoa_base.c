@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 03:28:55 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/22 03:38:10 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/22 03:39:16 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_uitoa_base(unsigned int n, char const *base)
 		len++;
 		div *= base_val;
 	}
-	if ((output = ft_calloc(len)) == NULL)
+	if ((output = ft_calloc(len, sizeof(char))) == NULL)
 		return (NULL);
 	i = 0;
 	while (div)
