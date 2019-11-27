@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 15:54:27 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/25 16:51:02 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/27 17:44:07 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strscat(size_t size, ...)
 	char	*strn;
 	char	*str;
 	va_list	ap;
-	
+
 	i = 0;
 	if (size == 0)
 		return (NULL);
