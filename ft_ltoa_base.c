@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
+/*   ft_ltoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 03:28:55 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/27 17:46:47 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/27 17:48:23 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_uitoa_base(unsigned int n, char const *base)
+char	*ft_ltoa_base(long n, char const *base)
 {
-	unsigned int	i;
-	int				base_len;
-	char			*strnew;
+	long	i;
+	int		base_len;
+	char	*strnew;
 
 	if (n == 0)
 		return (ft_strdup(&base[0]));

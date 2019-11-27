@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:37:23 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/25 16:49:57 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/27 17:51:18 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_uitoa(unsigned int n);
+char				*ft_ltoa_base(long n, char const *base);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 int					ft_lputstr(char const *s);
