@@ -6,11 +6,11 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:31:13 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/12 16:36:38 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/28 21:21:44 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_issapce(int c)
+int	ft_isspace(int c)
 {
 	if (c == ' ' || (c >= '\t' && c <= '\r'))
 		return (1);

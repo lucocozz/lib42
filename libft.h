@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 19:37:23 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/11/27 17:51:18 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/11/28 18:23:17 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char				*ft_strcat(char *dest, char *src);
 char				*ft_strscat(size_t size, ...);
 char				*ft_strcpy(char *dest, char *src);
 int					ft_atoi(const char *str);
+int					ft_atoui(const char *str);
 char				*ft_itoa_base(int value, char *base);
 char				*ft_uitoa_base(unsigned int n, char const *base);
 int					ft_atoi_base(char *str, char *base);
@@ -58,6 +59,7 @@ int					ft_tolower(int c);
 int					ft_isspace(int c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strfjoinp(char *s1, char const *s2, int prefix);
 char				*ft_strfjoin(char *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
