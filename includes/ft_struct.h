@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_define.h                                        :+:      :+:    :+:   */
+/*   ft_struct.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/04 22:58:58 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/12/05 02:40:45 by lucocozz         ###   ########.fr       */
+/*   Created: 2019/12/05 01:24:52 by lucocozz          #+#    #+#             */
+/*   Updated: 2019/12/05 03:48:51 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DEFINE_H
-# define FT_DEFINE_H
+#ifndef FT_STRUCT_H
+# define FT_STRUCT_H
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 256
-# endif
+# include "lib42.h"
 
-# define TRUE 1
-# define FALSE 0
+typedef struct	s_oparg
+{
+	char		*name;
+	void		*data;
+}				t_oparg;
 
 #endif

@@ -24,7 +24,8 @@ STR=	ft_strlen.c			ft_strdup.c			ft_strchr.c		\
 		ft_substr.c			ft_isspace.c		ft_count_word.c	\
 		ft_strcpy.c			ft_strcat.c			ft_strfjoin.c	\
 		ft_srealloc.c		ft_strrev.c			ft_strncmp.c	\
-		ft_subfstr.c		ft_strscat.c		ft_strfjoinp.c
+		ft_subfstr.c		ft_strscat.c		ft_strfjoinp.c	\
+		ft_strjoin_oa.c
 
 SRCS=	$(addprefix memory/, $(MEM))	$(addprefix integer/, $(INT))	\
 		$(addprefix file/, $(FILE))	$(addprefix string/, $(STR))

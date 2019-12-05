@@ -6,7 +6,7 @@
 /*   By: lucocozz <lucocozz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 10:12:14 by lucocozz          #+#    #+#             */
-/*   Updated: 2019/12/04 23:05:49 by lucocozz         ###   ########.fr       */
+/*   Updated: 2019/12/05 02:42:49 by lucocozz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,7 @@ char	*ft_strfjoin(char *s1, char const *s2)
 	strnew = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (strnew == NULL)
 		return (NULL);
-	while (s1[i])
-	{
-		strnew[i] = s1[i];
-		i++;
-	}
-	while (s2[j])
-		strnew[i++] = s2[j++];
-	strnew[i] = '\0';
-	ft_memdel((void**)&s1);
+	ft_strcpy(strnew, (char*)s1);
+	ft_strcat(strnew, (char*)s2);
 	return (strnew);
 }
